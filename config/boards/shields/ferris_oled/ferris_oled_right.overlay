@@ -4,23 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "cradio.dtsi"
+#include "ferris_oled.dtsi"
 
 &default_transform {
 	col-offset = <17>;
-};
-
-&nice_view_spi {
-	status = "okay";
-	nice_view: ls0xx@0 {
-		compatible = "sharp,ls0xx";
-		label = "DISPLAY";
-		spi-max-frequency = <1000000>;
-		reg = <0>;
-		width = <160>;
-		height = <68>;
-		sck-pin = <28>;
-		mosi-pin = <27>;
-		cs-gpios = <&pro_micro 29 GPIO_ACTIVE_HIGH>;
-	};
 };
