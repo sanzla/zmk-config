@@ -1,0 +1,18 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+nice_view_spi: &spi0 {
+	compatible = "nordic,nrf-spim";
+	sck-pin = <34>; //102
+	mosi-pin = <33>; //101
+	miso-pin = <33>; //NOT USED
+	cs-gpios = <&pro_micro 39 GPIO_ACTIVE_HIGH>; //107
+};
+
+
+&pro_micro_i2c {
+	status = "disabled";
+};
