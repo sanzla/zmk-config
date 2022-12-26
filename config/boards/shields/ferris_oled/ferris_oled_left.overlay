@@ -6,17 +6,9 @@
 
 #include "ferris_oled.dtsi"
 
-&nice_view_spi {
-	status = "okay";
-	nice_view: ls0xx@0 {
-		compatible = "sharp,ls0xx";
-		label = "DISPLAY";
-		spi-max-frequency = <1000000>;
-		reg = <0>;
-		width = <160>;
-		height = <68>;
-		sck-pin = <28>;
-		mosi-pin = <27>;
-		cs-gpios = <&pro_micro 29 GPIO_ACTIVE_HIGH>;
-	};
+nice_view_spi: &spi0 {
+	compatible = "nordic,nrf-spim";
+	sck-pin = <28>;
+	mosi-pin = <27>;
+	cs-gpios = <&pro_micro 29 GPIO_ACTIVE_HIGH>;
 };
