@@ -1,6 +1,6 @@
 file_format: "1"
-id: cradio
-name: Cradio/Sweep
+id: ferris_oled
+name: Ferris OLED
 type: shield
 url: https://github.com/davidphilipbarr/Sweep
 requires: [pro_micro]
@@ -9,5 +9,5 @@ features:
   - keys
   - display
 siblings:
-  - cradio_left
-  - cradio_right
+  - ferris_oled_left
+  - ferris_oled_right
